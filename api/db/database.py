@@ -24,7 +24,7 @@ DB_TYPE: str = config("DB_TYPE")
 
 
 SQLALCHEMY_DATABASE_URL = f'{DB_TYPE}://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}'
-# SQLALCHEMY_DATABASE_URL = "postgresql://postgres:Admin@localhost/master_boilerplate"
+# SQLALCHEMY_DATABASE_URL = "postgresql://postgres:Admin@localhost/ABNUR_BOILERPLATE"
 
 engine =create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal= sessionmaker(autocommit=False,autoflush=False,bind=engine)

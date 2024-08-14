@@ -39,8 +39,8 @@ sudo -u root psql
 ```
 ```sql
 CREATE USER user WITH PASSWORD 'your desired password'; 
-CREATE DATABASE hng_fast_api;
-GRANT ALL PRIVILEGES ON DATABASE hng_fast_api TO user;
+CREATE DATABASE ABNUR_BOILERPLATE;
+GRANT ALL PRIVILEGES ON DATABASE ABNUR_BOILERPLATE TO user;
 ```
 
 **Starting the database**
