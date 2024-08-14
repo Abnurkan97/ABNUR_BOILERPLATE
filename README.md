@@ -25,8 +25,8 @@ FastAPI boilerplate
 To set up the database, follow the following steps:
 
 **Cloning**
-- clone the repository using `git clone https://github.com/hngprojects/hng_boilerplate_python_fastapi_web`
-- `cd` into the directory hng_boilerplate_python_fastapi_web
+- clone the repository using `git clone https://github.com/Abnurkan97/ABNUR_BOILERPLATE`
+- `cd` into the directory ABNUR_BOILERPLATE
 - switch branch using `git checkout backend`
 
 **Environment Setup**
