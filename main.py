@@ -24,9 +24,9 @@ async def on_startup():
     else:
         logging.error("Database connection failed.")
 
-@app.get("/")
-async def read_root():
-    return {"message": "welcome to ABNURKHAN API BOILERPLATE"}
+# @app.get("/")
+# async def read_root():
+#     return {"message": "welcome to ABNURKHAN API BOILERPLATE"}
 
 if __name__ == "__main__":
     import uvicorn
