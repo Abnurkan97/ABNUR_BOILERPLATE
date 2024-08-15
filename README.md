@@ -117,6 +117,7 @@ push your alembic migrations.
 ## here is the link for the database  design
  https://drive.google.com/file/d/195l_cLdDVn8ObL6SPljSgwGMWHmQlJvD/view?usp=sharing
 
+
  ## GIT HUB ISSUES 
  - here is the list of github isues you can mark what you select
  https://docs.google.com/spreadsheets/d/1ifQY2dc_XCtFtYCb8yfzBvLjJpdNC-_l/edit?usp=sharing&ouid=111690764510872628517&rtpof=true&sd=true

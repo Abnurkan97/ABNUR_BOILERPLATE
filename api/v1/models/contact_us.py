@@ -13,9 +13,9 @@ class ContactUs(Base):
     __tablename__ = 'contact_us'
     
     id = Column(UUID(as_uuid=True), primary_key=True, server_default=text("gen_random_uuid()"))
+    user_id = Column(UUID(as_uuid=True), ForeignKey('users.id'))
     name = Column(String, nullable=False)
     email = Column(String, nullable=False)
     message = Column(Text, nullable=False)
     created_at = Column(TIMESTAMP(timezone=True),nullable=False,server_default=text('now()'))
-
-
+    user = relationship("User", back_populates="contact_us")
