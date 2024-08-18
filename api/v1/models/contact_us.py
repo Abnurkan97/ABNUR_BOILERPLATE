@@ -10,7 +10,7 @@ from api.v1.models.base import Base  # Import Base from the new base.py file
 
 
 class ContactUs(Base):
-    __tablename__ = 'contact_us'
+    __tablename__ = 'contact_uss'
     
     id = Column(UUID(as_uuid=True), primary_key=True, server_default=text("gen_random_uuid()"))
     user_id = Column(UUID(as_uuid=True), ForeignKey('users.id'))

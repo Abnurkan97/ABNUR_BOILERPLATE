@@ -20,7 +20,7 @@ DB_USER: str = config("DB_USER")
 DB_PASSWORD: str = config("DB_PASSWORD")
 DB_NAME: str = config("DB_NAME")
 DB_TYPE: str = config("DB_TYPE")
-TEST_DB_NAME ='master_boilerplate_test'
+TEST_DB_NAME ='ABNUR_BOILERPLATE_TEST'
 
 # PostgreSQL test database URL (adjust with your PostgreSQL credentials)
 SQLALCHEMY_DATABASE_URL = f"{DB_TYPE}://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{TEST_DB_NAME}"

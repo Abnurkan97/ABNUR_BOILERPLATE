@@ -34,6 +34,7 @@ class User(Base):
     invite_links = relationship("InviteLink", back_populates="user")
     magic_links = relationship("MagicLink", back_populates="user")
     random_data = relationship("RandomData", back_populates="user")
+    contact_us = relationship("ContactUs", back_populates="user")
 
 
 
