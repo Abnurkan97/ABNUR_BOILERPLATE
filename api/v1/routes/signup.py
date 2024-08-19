@@ -1,4 +1,4 @@
-from fastapi import Depends, status, APIRouter, Response, Request
+from fastapi import Depends, status, APIRouter, Response, Request,HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session, relationship
 from api.utils.success_response import success_response
@@ -20,7 +20,7 @@ def register(user_schema: UserCreate, db: Session = Depends(get_db)):
     check_email = db.query(User).filter(User.email == user_schema.email).first()
     
     if check_email:
-        raise HTTPException(status_code=400,detail="Email already exist")
+        raise HTTPException(status_code=409,detail="Email already exist")
     
     hashed_password = user_service.hash_password(user_schema.password)
     user_schema.password = hashed_password

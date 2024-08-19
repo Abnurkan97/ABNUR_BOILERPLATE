@@ -70,7 +70,7 @@ class UserService(Service):
         '''Creates a new user'''
 
         if db.query(User).filter(User.email == schema.email).first() or db.query(User).filter(User.username == schema.username).first():
-            raise HTTPException(status_code=400, detail='User with this email or username already exists')
+            raise HTTPException(status_code=status.Htt, detail='User with this email or username already exists')
 
         # Hash password
         schema.password = self.hash_password(password=schema.password)
