@@ -1,6 +1,6 @@
 import logging
 from fastapi import FastAPI
-from api.db.database import engine,SQLALCHEMY_DATABASE_URL,create_tables,check_database_connection
+from api.db.database import engine,SQLALCHEMY_DATABASE_URL,check_database_connection
 
 from api.v1 import models
 from fastapi import FastAPI
@@ -20,7 +20,7 @@ app.include_router(api_version_one)
 async def on_startup():
     if check_database_connection():
         logging.info("Database is connected succesfully.")
-        create_tables()
+        # create_tables()
     else:
         logging.error("Database connection failed.")
 

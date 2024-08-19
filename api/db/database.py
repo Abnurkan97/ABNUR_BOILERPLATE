@@ -39,12 +39,12 @@ def get_db():
         db.close()
         
 
-def create_tables():
-    try:
-        Base.metadata.create_all(bind=engine)
-        logging.info("Tables created successfully")
-    except SQLAlchemyError as e:
-        logging.error(f"Error creating tables: {e}")
+# def create_tables():
+#     try:
+#         Base.metadata.create_all(bind=engine)
+#         logging.info("Tables created successfully")
+#     except SQLAlchemyError as e:
+#         logging.error(f"Error creating tables: {e}")
 
 
 

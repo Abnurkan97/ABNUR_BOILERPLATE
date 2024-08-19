@@ -15,7 +15,7 @@ from api.utils.settings import settings
 from api.utils.db_validators import check_model_existence
 from api.v1.models.user import User
 from api.v1.schemas import user
-from api.v1.schemas import token
+# from api.v1.schemas import token
 
 oauth2_scheme = OAuth2PasswordBearer('/api/v1/auth/login')
 pwd_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
@@ -70,7 +70,7 @@ class UserService(Service):
         '''Creates a new user'''
 
         if db.query(User).filter(User.email == schema.email).first() or db.query(User).filter(User.username == schema.username).first():
-            raise HTTPException(status_code=400, detail='User with this email or username already exists')
+            raise HTTPException(status_code=status.Htt, detail='User with this email or username already exists')
 
         # Hash password
         schema.password = self.hash_password(password=schema.password)
