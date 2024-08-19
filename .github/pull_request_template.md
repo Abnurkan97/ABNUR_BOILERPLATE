@@ -1,6 +1,24 @@
 ## Description
 
-Please include a summary of the changes and the related issue. 
+This pull request implements an API endpoint for user login. The endpoint allows created users to login to his/her account by providing necessary details such  email and password.
+
+### Endpoint Details
+
+- **HTTP Method:** POST
+- **Endpoint URL:** `/api/v1/auth/login`
+- **Request Payload:**
+  ```json
+  {
+    "email": "user@example.com",
+    "password": "securepassword"
+  }
+
+
+## Response:
+
+- 200 Success: User successfully login.
+- 400 Bad Request: Invalid input data (e.g., missing fields, invalid email format).
+- 500 Internal Server Error: If there is a server-side error.
 
 ## Type of change
 
@@ -11,7 +29,14 @@ Please include a summary of the changes and the related issue.
 
 ## How Has This Been Tested?
 
-Please describe the tests that you ran to verify your changes.
+ Unit Tests
+ Integration Tests
+ Manual Testing
+
+## Test Configuration:
+Operating System:
+Browser:
+API Client (e.g., Postman):
 
 ## Checklist:
 
@@ -21,3 +46,6 @@ Please describe the tests that you ran to verify your changes.
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes
 - [ ] Any dependent changes have been merged and published in downstream modules
+
+##  Screenshots (if applicable):
+If applicable, add screenshots to help explain your changes.
